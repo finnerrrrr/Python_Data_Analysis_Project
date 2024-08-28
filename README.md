@@ -132,7 +132,9 @@ for i in range(5):
 plt.show()
 ```
 ## Results
+
 ![visulisation2](/assets/visualisation2.png)
+
 __Line graph of the top 5 skills trending over the months in 2023__
 
 ## Insights 
