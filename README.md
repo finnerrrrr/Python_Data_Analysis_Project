@@ -48,6 +48,51 @@ df['job_posted_date'] = pd.to_datetime(df['job_posted_date'])
 df['job_skills'] = df['job_skills'].apply(lambda x: ast.literal_eval(x) if pd.notna(x) else x)
 ```
 
-## 
+## Filter US Jobs
+
+I'm focusing my analysis on the US Job Market, so I'll filter my dataset for jobs that are located in the US 
+
+```python
+df_us = df[df['job_country'] == 'United States']
+```
+
+# The Analysis
+
+Each Jupyter notebook is aimed at investigating different aspects of the job market and is used to answer the guidiing questions. Here's how i approached each question. 
+
+# 1. What are the most demanded skills for the top 3 most popular data roles
+
+I first have to filter for the top 3 data roles and include the top 5 skills for each of the 3 roles. This query highlights the most popular job titles and their top skills, showing which skills I should pay attention to depending on the role I'm targeting.
+
+For the detailed steps, click here: [2_Skill_Demand](/Project/2_Skill_Demand/)
+
+## Visualing the Data 
+
+```python
+ig, ax = plt.subplots(len(job_titles), 1)
+
+
+for i, job_title in enumerate(job_titles):
+    df_plot = df_skills_perc[df_skills_perc['job_title_short'] == job_title].head(5)
+    sns.barplot(data=df_plot, x='skill_percent', y='job_skills', ax=ax[i], hue='skill_count', palette='dark:b_r')
+    ax[i].set_title(job_title)
+    ax[i].set_ylabel('')
+    ax[i].set_xlabel('')
+    ax[i].get_legend().remove()
+    ax[i].set_xlim(0, 78)
+    # remove the x-axis tick labels for better readability
+    if i != len(job_titles) - 1:
+        ax[i].set_xticks([])
+
+    # label the percentage on the bars
+    for n, v in enumerate(df_plot['skill_percent']):
+        ax[i].text(v + 1, n, f'{v:.0f}%', va='center')
+
+fig.suptitle('Likelihood of Skills Requested in US Job Postings', fontsize=15)
+fig.tight_layout(h_pad=.8)
+plt.show()
+```
+## Results 
+![Visualisation1](/assets
 
 
