@@ -31,7 +31,7 @@ This section outlines the steps I took to clean and process the data used for my
 
 First step was to load in the necessary libraries and datasource, followed by cleaning it to ensure data quality.
 
-```
+```python
 # Importing libraries 
 import ast
 import pandas as pd
