@@ -132,7 +132,7 @@ for i in range(5):
 plt.show()
 ```
 ## Results
-![visulisation2](/assets/visualisation2)
+![visulisation2](/assets/visualisation2.png)
 __Line graph of the top 5 skills trending over the months in 2023__
 
 ## Insights 
@@ -166,7 +166,7 @@ plt.gca().xaxis.set_major_formatter(ticks_x)
 plt.show()
 ```
 ## Results
-![visualisation3](/assets/visualisation3)
+![visualisation3](/assets/visualisation3.png)
 
 ## Insights
 
@@ -182,7 +182,7 @@ Next, I narrowed my analysis and focused only on data analyst roles. I looked at
 
 ## Visualisation
 
-![visualisation4](/assets/visualisation4)
+![visualisation4](/assets/visualisation4.png)
 
 __Horizontal bar charts displaying the salaries of the highest paid and most in-demand skills__
 
@@ -202,7 +202,7 @@ For the detailed steps, click here: [5_Optimal_Skills](/Project/5_Optimal_Skills
 
 ## Visualisation 
 
-![visualisation5](/assets/visualisation5)
+![visualisation5](/assets/visualisation5.png)
 
 __Scatter plot visualising most Optimal skills (highest demand & salary) for Data Analysts__
 
@@ -216,7 +216,7 @@ __Scatter plot visualising most Optimal skills (highest demand & salary) for Dat
 
 ## Improving Visualisation 
 
-![visualisation6](/assets/visualisation6)
+![visualisation6](/assets/visualisation6.png)
 
 __Scatter plot visualising most Optimal skills (highest demand & salary) for Data Analysts with colour labels for type of technology__
 
